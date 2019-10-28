@@ -1,6 +1,8 @@
 # ExecutableInfoReader
 Azure DevOps extension that reads file, program, and optionally assembly info from executables (and dlls). Inspired by [Paul Appeldoorn's AssemblyVersionLoader Extension](https://github.com/appiepau/AssemblyVersionLoader), however this focuses first on reading from executables instead of dlls.
 
+Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
+
 # Usage
 Set the Variable Root Prefix to the value that you want the generated variables to be prefixed by. For instance, if you set the Variable Root Prefix to "Foo" then the variables would be:
 
