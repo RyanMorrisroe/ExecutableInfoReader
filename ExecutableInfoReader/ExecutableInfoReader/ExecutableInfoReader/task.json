@@ -9,7 +9,7 @@
   "version": {
     "Major": 0,
     "Minor": 9,
-    "Patch": 0
+    "Patch": 1
   },
   "visibility": [
     "Build",
@@ -44,14 +44,14 @@
     {
       "name": "loadAssemblyVersion",
       "type": "boolean",
-      "label": "Load Product Version",
+      "label": "Load Assembly Version",
       "defaultValue": false,
       "helpMarkDown": "If enabled, will create version variables based on the Assembly Version. Note that many executables will not have assembly version information available, in which case blank values will be output.",
       "required": "false"
     }
   ],
   "execution": {
-    "Powershell": {
+    "Powershell3": {
       "target": "$(currentDirectory)\\ExecutableInfoReader.ps1"
     }
   }

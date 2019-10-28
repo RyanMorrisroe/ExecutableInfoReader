@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "ExecutableInfoReader",
   "name": "Executable Version Info Reader",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "publisher": "RyanMorrisroe",
   "public": false,
   "targets": [

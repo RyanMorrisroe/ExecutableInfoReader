@@ -1,15 +1,16 @@
-﻿Param (
-	[string]$fileName,
-	[string]$variableRoot = "",
-	[bool]$loadProductVersion = $false,
-	[bool]$loadAssemblyVersion = $false
-)
+﻿function LoadInputVariables {
+	$fileName = Get-VstsInput -Name "fileName" -Require;
+	$variableRoot = Get-VstsInput -Name "variableRoot" -Require;
+	$loadProductVersion = Get-VstsInput -Name "loadProductVersion" -Require -AsBool;
+	$loadAssemblyVersion = Get-VstsInput -Name "loadAssemblyVersion" -Require -AsBool;
+}
 
 function CreateVariable([string]$name, [string]$value) {
 	Write-Host("Creating variable " + $name);
-	Write-Output("#vso[task.setvariable variable=" + $name + ";]" + $value);
+	Set-VstsTaskVariable -Name $name -Value $value;
 }
 
+LoadInputVariables;
 $file = Get-Item "$fileName";
 $fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion.split(';')[0]);
 
