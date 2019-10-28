@@ -26,6 +26,6 @@ Set the Variable Root Prefix to the value that you want the generated variables 
 |Foo.AssemblyVersionInfo.Version.Build|The build version from the Assembly Version property|
 |Foo.AssemblyVersionInfo.Version.Revision|The revision version from the Assembly Version property|
 
-## Important Notes:
+## Important Notes
 * File Version can occassionally have extra text outside of just the version information (for instance, take a look at iexplore.exe on Windows 10). Any extra information is stripped off by this utility. 
 * Many executables do not have Assembly Version information because they do not contain readable manifests. When that occurs and the option to output Assembly Version information is enabled, a warning will be emitted and empty strings will be written to the AssemblyVersionInfo variables.
