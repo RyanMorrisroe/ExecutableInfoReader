@@ -10,6 +10,11 @@ function CreateVariable([string]$name, [string]$value) {
 	Set-VstsTaskVariable -Name $name -Value $value;
 }
 
+Write-Host("FileName: $fileName");
+Write-Host("Root: $variableRoot");
+Write-Host("PV: $strLoadProductVersion");
+Write-Host("AV: $strLoadAssemblyVersion");
+
 $loadProductVersion = [System.Convert]::ToBoolean($strLoadProductVersion);
 $loadAssemblyVersion = [System.Convert]::ToBoolean($strLoadAssemblyVersion);
 
