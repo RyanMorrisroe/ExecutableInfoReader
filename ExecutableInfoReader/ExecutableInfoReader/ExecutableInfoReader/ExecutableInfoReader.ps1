@@ -13,10 +13,10 @@ $fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($f
 
 Write-Host("File Version is " + $fileVersion);
 CreateVariable "$variableRoot.FileVersionInfo.Version" $fileVersion;
-CreateVariable "$variableRoot.FileVersionInfo.Verson.Major" $fileVersion.Major;
-CreateVariable "$variableRoot.FileVersionInfo.Verson.Minor" $fileVersion.Minor;
-CreateVariable "$variableRoot.FileVersionInfo.Verson.Build" $fileVersion.Build;
-CreateVariable "$variableRoot.FileVersionInfo.Verson.Revision" $fileVersion.Revision;
+CreateVariable "$variableRoot.FileVersionInfo.Version.Major" $fileVersion.Major;
+CreateVariable "$variableRoot.FileVersionInfo.Version.Minor" $fileVersion.Minor;
+CreateVariable "$variableRoot.FileVersionInfo.Version.Build" $fileVersion.Build;
+CreateVariable "$variableRoot.FileVersionInfo.Version.Revision" $fileVersion.Revision;
 
 
 if($loadProductVersion) {
