@@ -1,16 +1,18 @@
-﻿function LoadInputVariables {
-	$fileName = $INPUT_FILENAME;
-	$variableRoot = $INPUT_VARIABLEROOT;
-	$loadProductVersion = $INPUT_LOADPRODUCTVERSION;
-	$loadAssemblyVersion = $INPUT_LOADASSEMBLYVERSION;
-}
+﻿Param (
+	[string]$fileName,
+	[string]$variableRoot = "",
+	[string]$strLoadProductVersion = "false",
+	[string]$strLoadAssemblyVersion = "false"
+)
 
 function CreateVariable([string]$name, [string]$value) {
 	Write-Host("Creating variable " + $name);
 	Set-VstsTaskVariable -Name $name -Value $value;
 }
 
-LoadInputVariables;
+$loadProductVersion = [System.Convert]::ToBoolean($strLoadProductVersion);
+$loadAssemblyVersion = [System.Convert]::ToBoolean($strLoadAssemblyVersion);
+
 $file = Get-Item "$fileName";
 $fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion.split(';')[0]);
 
