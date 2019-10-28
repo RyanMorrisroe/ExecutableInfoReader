@@ -7,13 +7,9 @@ $fileName = Get-VstsInput -Name "fileName" -Require;
 $variableRoot = Get-VstsInput -Name "variableRoot" -Require;
 $loadProductVersion = Get-VstsInput -Name "loadProductVersion" -Require -AsBool;
 $loadAssemblyVersion = Get-VstsInput -Name "loadAssemblyVersion" -Require -AsBool;
-Write-Host("FileName: $fileName");
-Write-Host("Root: $variableRoot");
-Write-Host("PV: $strLoadProductVersion");
-Write-Host("AV: $strLoadAssemblyVersion");
 
 $file = Get-Item "$fileName";
-$fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion.split(';')[0]);
+$fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion.split(' ')[0]);
 
 Write-Host("File Version is " + $fileVersion);
 CreateVariable "$variableRoot.FileVersionInfo.Version" $fileVersion;
