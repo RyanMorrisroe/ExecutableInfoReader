@@ -44,8 +44,8 @@ if($loadAssemblyVersion) {
 		CreateVariable "$variableRoot.AssemblyVersionInfo.Verson.Revision" $assemblyVersion.Revision;
 	}
 	catch {
-		Write-Host("Could not load assembly information - likely because the executable does not contain a manifest");
-		Write-Host("Writing empty values for assembly variables");
+		Write-Warning("Could not load assembly information - likely because the executable does not contain a manifest");
+		Write-Warning("Writing empty values for assembly variables");
 		CreateVariable "$variableRoot.AssemblyVersionInfo.Version" "";
 		CreateVariable "$variableRoot.AssemblyVersionInfo.Verson.Major" "";
 		CreateVariable "$variableRoot.AssemblyVersionInfo.Verson.Minor" "";

@@ -7,8 +7,8 @@
   "author": "Ryan Morrisroe",
   "helpMarkDown": "Creates variables based on the version info found in an executable or dll. See https://github.com/RyanMorrisroe/ExecutableInfoReader for more information.",
   "version": {
-    "Major": 1,
-    "Minor": 0,
+    "Major": 0,
+    "Minor": 9,
     "Patch": 0
   },
   "visibility": [
