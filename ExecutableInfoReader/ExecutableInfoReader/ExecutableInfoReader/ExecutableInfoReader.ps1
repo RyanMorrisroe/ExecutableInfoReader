@@ -1,8 +1,8 @@
 ﻿function LoadInputVariables {
-	$fileName = Get-VstsInput -Name "fileName" -Require;
-	$variableRoot = Get-VstsInput -Name "variableRoot" -Require;
-	$loadProductVersion = Get-VstsInput -Name "loadProductVersion" -Require -AsBool;
-	$loadAssemblyVersion = Get-VstsInput -Name "loadAssemblyVersion" -Require -AsBool;
+	$fileName = $INPUT_FILENAME;
+	$variableRoot = $INPUT_VARIABLEROOT;
+	$loadProductVersion = $INPUT_LOADPRODUCTVERSION;
+	$loadAssemblyVersion = $INPUT_LOADASSEMBLYVERSION;
 }
 
 function CreateVariable([string]$name, [string]$value) {
@@ -11,10 +11,6 @@ function CreateVariable([string]$name, [string]$value) {
 }
 
 LoadInputVariables;
-Write-Output $fileName;
-Write-Output $variableRoot;
-Write-Output $loadProductVersion;
-Write-Output $loadAssemblyVersion;
 $file = Get-Item "$fileName";
 $fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion.split(';')[0]);
 
