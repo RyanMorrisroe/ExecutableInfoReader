@@ -11,6 +11,10 @@ function CreateVariable([string]$name, [string]$value) {
 }
 
 LoadInputVariables;
+Write-Output $fileName;
+Write-Output $variableRoot;
+Write-Output $loadProductVersion;
+Write-Output $loadAssemblyVersion;
 $file = Get-Item "$fileName";
 $fileVersion = [Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion.split(';')[0]);
 
