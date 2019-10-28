@@ -2,9 +2,9 @@
   "manifestVersion": 1,
   "id": "ExecutableInfoReader",
   "name": "Executable Version Info Reader",
-  "version": "0.9.10",
+  "version": "1.0.0",
   "publisher": "RyanMorrisroe",
-  "public": false,
+  "public": true,
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
