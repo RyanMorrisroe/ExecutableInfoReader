@@ -1,4 +1,6 @@
-﻿# ExecutableInfoReader
+﻿[![Build status](https://dev.azure.com/ryanmorrisroepublic/DevOpsExtensions/_apis/build/status/ExecutableInfoReader)](https://dev.azure.com/ryanmorrisroepublic/DevOpsExtensions/_build/latest?definitionId=-1) [![Release Status](https://vsrm.dev.azure.com/ryanmorrisroepublic/_apis/public/Release/badge/c1eeb9ad-9b54-428f-990b-9b0b987a13eb/1/1)](https://dev.azure.com/ryanmorrisroepublic/DevOpsExtensions/_release?_a=releases&definitionId=1)
+
+# ExecutableInfoReader
 Azure DevOps extension that reads file, program, and optionally assembly info from executables (and dlls). Inspired by [Paul Appeldoorn's AssemblyVersionLoader Extension](https://github.com/appiepau/AssemblyVersionLoader), however this focuses first on reading from executables instead of dlls.
 
 Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
